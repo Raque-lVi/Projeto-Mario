@@ -1,0 +1,120 @@
+body {
+    font-family: 'Poppins';
+}
+
+.cabecalho{
+
+    display: flex; /*tem de botar no cabecalho pois assim a logo e o texto ficaram lado a lado 
+    pois são de duas tegs diferentes uma de "a" e outra "nav"*/
+    justify-content: space-between;/*da o maximo de espaço entre eles ficando um no oeste e outro no leste*/
+    padding: 30px;
+    max-width: 1440px; /*vai da uma distancia do lado esquerdo da borda*/
+    margin: 0 auto; /*vai pegar a distancia do codigo anterior e dividir igualmente entre as duas margens (esquerda e direita) talves so de para ver a diferença ao diminuir o zum da tela*/
+
+}
+
+.cabecalho .logo{
+
+    width: 64px;
+}
+
+
+.cabecalho .Menu{
+
+    display: flex;
+    align-items: center; /*coloca o menu no meio em relação a autura porem é necessario o codigo a seguir para dizer que o texto pode ocupar 100% do espaço que possui em relação a altura e não a largura*/
+    height: 100%;
+}
+
+.cabecalho nav li a{/*fazendo o caminho ate o <a>*/
+
+    font-weight: bold; /*negrito*/
+    color: #ffffff;
+    font-size: 25px; /*tamanho da letra*/
+    padding: 10px 20px; /*espaçamento entre os <a> cada um equivale a um lado*/
+    border-radius: 50px; /*aredondar bordas*/
+    transition: 0.2s; /*demora um tempo a transição*/
+}
+
+.cabecalho nav li a:hover{ /*quando paçar o mause por cima faça: ...*/
+
+    background-color: #d5011d;
+}
+
+.containe{
+
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 132px) ; /*vh = tela do usuario*/
+    padding: 0 30px 30px;
+
+}
+
+.containe .imagem-titulo{
+
+
+    max-width: 500px;
+
+}
+
+.containe .descricao {
+
+color: #a8adb7;
+width: 80%;
+font-size: 18px; /*almenta a letra*/
+margin: 30px 0;/*sem espaçamento nas laterais apenas na altura*/
+}
+
+.containe .botao-traile{
+
+background-color: #ff0021;
+color: #ffffff;
+padding: 15px;/*espaçamento do text para a borda*/
+font-size: 18px;
+font-weight: bold;/*negrito*/
+cursor: pointer;/*maosinha ao se aprosimar do botao*/
+border: none;
+text-transform: uppercase; /*texto todo em maiuscula*/
+transition: 0.5s all ease-in-out;/*animação sinha*/
+}
+
+.containe .botao-traile:hover{
+
+    transform: scale(1.1);
+}
+
+.fundo-video{
+
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+
+
+.fundo-video .video{
+
+    height: 100vh;
+
+}
+
+
+.fundo-video::after{
+
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0; /* alinhado ao topo*/
+    left: 0;  /*alinhado a esquerda*/
+    background: linear-gradient( 90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 50%, rgba(0,0,0,1) 100% );
+
+
+}
+
+
